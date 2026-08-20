@@ -1,5 +1,5 @@
 # =============================================================================
-# 星澜直播 · 发布工作流（供参考）
+# 泡泡直播 · 发布工作流（供参考）
 #
 # ⚠️ 重要：本仓库是【闭源发布仓库】，里面没有源码，所以这个 workflow
 #    只是结构参考 / 占位。真正的构建与发版应在【私有构建仓库】中运行：
@@ -46,7 +46,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release create "v${{ github.event.inputs.version }}" \
-            --title "星澜直播 v${{ github.event.inputs.version }}" \
+            --title "泡泡直播 v${{ github.event.inputs.version }}" \
             --notes "${{ github.event.inputs.notes }}" \
             build/*.exe build/*.dmg build/sha256.txt \
             --latest
