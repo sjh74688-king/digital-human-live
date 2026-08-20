@@ -38,14 +38,14 @@ Write-Host "已生成 $manifestPath"
 # 2) 创建/更新 Release
 $ghArgs = @("release", "create", $Tag,
   "--repo", $Repo,
-  "--title", "星澜直播 $Tag",
+  "--title", "泡泡直播 $Tag",
   "--notes", $Notes,
   "--latest")
 foreach ($a in $assets) { $ghArgs += "--generate-notes" | Out-Null; $ghArgs += $a.FullName }
 $ghArgs += $manifestPath
 
 # gh release create 不支持 --generate-notes 与自定义 notes 同用，这里简化：
-& gh release create $Tag --repo $Repo --title "星澜直播 $Tag" --notes $Notes @($assets | ForEach-Object { $_.FullName }) $manifestPath
+& gh release create $Tag --repo $Repo --title "泡泡直播 $Tag" --notes $Notes @($assets | ForEach-Object { $_.FullName }) $manifestPath
 
 Write-Host ""
 Write-Host "✔ Release 已发布: $Tag"
