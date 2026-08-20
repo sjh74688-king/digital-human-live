@@ -1,5 +1,5 @@
 # =============================================================================
-# 星澜直播 XingLan Live · Windows 一键安装脚本
+# 泡泡直播 Paopao Live · Windows 一键安装脚本
 #
 # 说明：
 #   1) 本脚本只从 GitHub Releases 下载【官方签名安装包】，不下载任何源码；
@@ -18,8 +18,8 @@ $ErrorActionPreference = "Stop"
 # ---------- 配置区（上架前替换） ----------
 $RepoOwner   = "<你的GitHub账号>"
 $RepoName    = "digital-human-live"
-$ProductName = "XingLanLive"            # 安装包文件名前缀
-$InstallDir  = "C:\Program Files\XingLanLive"
+$ProductName = "PaopaoLive"            # 安装包文件名前缀
+$InstallDir  = "C:\Program Files\PaopaoLive"
 # 期望的 SHA-256（每次发版后由发布流程更新到这里；也可改为从 Releases 的 sha256.txt 读取）
 $ExpectedSha256 = "替换为最新版本的SHA256小写"
 # ------------------------------------------
@@ -27,7 +27,7 @@ $ExpectedSha256 = "替换为最新版本的SHA256小写"
 # 1. 获取最新版本 tag（调用 GitHub API，无需 token 有速率限制但个人足够）
 Write-Host "[1/4] 查询最新版本..." -ForegroundColor Cyan
 $api = "https://api.github.com/repos/$RepoOwner/$RepoName/releases/latest"
-$rel = Invoke-RestMethod -Uri $api -Headers @{ "User-Agent" = "XingLanInstaller" }
+$rel = Invoke-RestMethod -Uri $api -Headers @{ "User-Agent" = "PaopaoInstaller" }
 $tag = $rel.tag_name
 Write-Host "      最新版本: $tag"
 
@@ -56,5 +56,5 @@ if ($LASTEXITCODE -ne 0) { throw "安装失败，退出码 $LASTEXITCODE" }
 
 Remove-Item $exePath -Force -ErrorAction SilentlyContinue
 Write-Host ""
-Write-Host "✔ 安装完成。请启动「星澜直播」并输入 License Key 激活。" -ForegroundColor Green
+Write-Host "✔ 安装完成。请启动「泡泡直播」并输入 License Key 激活。" -ForegroundColor Green
 Write-Host "  购买/补发 Key：https://【购买链接】" -ForegroundColor Yellow
