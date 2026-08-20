@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # =============================================================================
-# 星澜直播 XingLan Live · macOS 一键安装脚本
+# 泡泡直播 Paopao Live · macOS 一键安装脚本
 #
 # 说明：
 #   1) 本脚本只从 GitHub Releases 下载【官方签名 + 公证（notarized）的 dmg】；
@@ -14,18 +14,18 @@ set -euo pipefail
 # ---------- 配置区（上架前替换） ----------
 REPO_OWNER="<你的GitHub账号>"
 REPO_NAME="digital-human-live"
-PRODUCT_PREFIX="XingLanLive"
-APP_NAME="星澜直播.app"          # dmg 内的应用名，按你打包时的实际名称替换
+PRODUCT_PREFIX="PaopaoLive"
+APP_NAME="泡泡直播.app"          # dmg 内的应用名，按你打包时的实际名称替换
 EXPECTED_SHA256="替换为最新版本的SHA256小写"
 # ------------------------------------------
 
 echo "[1/4] 查询最新版本..."
 api="https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/releases/latest"
-tag=$(curl -fsSL -H "User-Agent: XingLanInstaller" "$api" | grep -m1 '"tag_name"' | cut -d'"' -f4)
+tag=$(curl -fsSL -H "User-Agent: PaopaoInstaller" "$api" | grep -m1 '"tag_name"' | cut -d'"' -f4)
 echo "      最新版本: ${tag}"
 
 # 定位 macOS 资产
-dl_url=$(curl -fsSL -H "User-Agent: XingLanInstaller" "$api" \
+dl_url=$(curl -fsSL -H "User-Agent: PaopaoInstaller" "$api" \
   | grep -m1 "${PRODUCT_PREFIX}-.*\.dmg\"" | grep 'browser_download_url' | cut -d'"' -f4)
 if [[ -z "$dl_url" ]]; then
   echo "错误：未找到 macOS 安装包（${PRODUCT_PREFIX}-*.dmg）" >&2
@@ -61,5 +61,5 @@ rm -rf "$dmg_path" "$mnt"
 xattr -d com.apple.quarantine "/Applications/${APP_NAME}" 2>/dev/null || true
 
 echo ""
-echo "✔ 安装完成。请启动「星澜直播」并输入 License Key 激活。"
+echo "✔ 安装完成。请启动「泡泡直播」并输入 License Key 激活。"
 echo "  购买/补发 Key：https://【购买链接】"
