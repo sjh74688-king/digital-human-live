@@ -1,0 +1,31 @@
+name: 功能建议
+description: 提出新功能或改进建议
+title: "[Feature] 简要描述"
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢建议！付费客户的建议会在工单系统中优先评估，
+        也可通过【客服邮箱】直接反馈以获取排期回复。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 你想解决什么问题？
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: 你设想的方案
+      required: false
+  - type: textarea
+    id: alternative
+    attributes:
+      label: 其他可能的方案
+      required: false
+  - type: input
+    id: order
+    attributes:
+      label: 付费订单号（可选）
+      required: false

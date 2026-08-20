@@ -1,0 +1,73 @@
+name: Bug 报告
+description: 报告软件缺陷（请勿在 Issue 中粘贴 License Key、邮箱等敏感信息）
+title: "[Bug] 简要描述"
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提交前请先在 [FAQ](https://github.com/你的账号/digital-human-live#-常见问题) 中搜索。
+        **请勿粘贴 License Key、订单号、支付信息**——如需关联订单，请通过客服邮箱单独提供。
+  - type: input
+    id: version
+    attributes:
+      label: 软件版本
+      description: 在「关于」页面查看
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: 操作系统
+      description: 例如 Windows 11 23H2 / macOS 15
+      required: true
+  - type: input
+    id: gpu
+    attributes:
+      label: 显卡型号
+      description: 例如 RTX 4060 8GB（没有独显请写「核显」）
+      required: false
+  - type: dropdown
+    id: module
+    attributes:
+      label: 涉及模块
+      options:
+        - 激活/授权
+        - 形象/语音生成
+        - 直播推流
+        - 话术/评论互动
+        - 安装/更新
+        - 其他
+    required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开...
+        2. 点击...
+        3. 出现...
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: 日志（可选）
+      description: 软件内「帮助 → 导出日志」生成 zip，作为附件上传，不要直接贴 Key
+      render: text
+    required: false
+  - type: textarea
+    id: contact
+    attributes:
+      label: 付费订单号（可选，便于优先处理）
+      description: 仅提供订单号即可，不要贴 Key
+      required: false

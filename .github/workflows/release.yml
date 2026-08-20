@@ -1,0 +1,57 @@
+# =============================================================================
+# 星澜直播 · 发布工作流（供参考）
+#
+# ⚠️ 重要：本仓库是【闭源发布仓库】，里面没有源码，所以这个 workflow
+#    只是结构参考 / 占位。真正的构建与发版应在【私有构建仓库】中运行：
+#      私有仓库 CI 构建出 exe/dmg
+#        → 上传到对象存储（>2GB 的资产）或直接调 GitHub API
+#        → 在【本公开仓库】创建 Release 并挂载资产
+#        → 更新本仓库 scripts/install.*.sh 中的 $ExpectedSha256 并提交
+#
+# 如果未来你改为「私有仓库构建 → 推送产物到公开仓库 release/ 分支」的模式，
+# 可参考下方结构。请勿把签名密钥、构建凭据放入本公开仓库。
+# =============================================================================
+name: release
+
+on:
+  # 改为由私有构建仓库 webhook 触发，或手动触发
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "版本号（如 1.0.0）"
+        required: true
+      notes:
+        description: "发布说明"
+        required: false
+        default: "版本更新"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 下载构建产物（从对象存储 / 私有仓库制品库）
+        run: |
+          echo "TODO: 从你的对象存储下载 build/ 下的 exe 与 dmg"
+          echo "例如: aws s3 cp s3://你的桶/releases/${{ github.event.inputs.version }}/ build/ --recursive"
+
+      - name: 生成 SHA-256 清单
+        run: |
+          cd build && sha256sum *.exe *.dmg > sha256.txt && cat sha256.txt
+
+      - name: 创建 GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "v${{ github.event.inputs.version }}" \
+            --title "星澜直播 v${{ github.event.inputs.version }}" \
+            --notes "${{ github.event.inputs.notes }}" \
+            build/*.exe build/*.dmg build/sha256.txt \
+            --latest
+
+      - name: 回填 SHA-256 到安装脚本（可选，需要写权限）
+        run: |
+          echo "TODO: 解析 build/sha256.txt，更新 scripts/install.ps1 / install.sh 中的期望值并提交"
+          echo "（更推荐：发版后手动回填并提交，保持脚本透明可审计）"

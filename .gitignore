@@ -1,0 +1,46 @@
+# ---- 依赖与构建产物（本仓库为闭源发布仓库，理论上不应出现这些目录，保留兜底） ----
+node_modules/
+dist/
+build/
+out/
+release/
+*.tsbuildinfo
+
+# ---- 密钥与敏感信息（严禁入库！） ----
+.env
+.env.*
+*.pem
+*.p12
+*.pfx
+*.key
+*.crt
+secrets/
+license-server/
+*.license
+*.lic
+
+# ---- 大文件（安装包、模型权重、视频素材超过 GitHub 单文件 2GB 限制的一律走对象存储） ----
+*.exe
+*.msi
+*.dmg
+*.pkg
+*.appimage
+*.zip
+*.7z
+*.onnx
+*.safetensors
+*.ckpt
+*.bin
+
+# ---- 日志与临时文件 ----
+*.log
+logs/
+tmp/
+.cache/
+.DS_Store
+Thumbs.db
+
+# ---- IDE ----
+.idea/
+.vscode/
+*.swp

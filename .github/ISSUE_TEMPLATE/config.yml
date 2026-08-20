@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 购买 / 激活 / 发票问题
+    url: https://【购买链接】
+    about: 商务与订单问题请走购买页客服入口或【客服邮箱】，不要开 Issue。
+  - name: 付费客户工单
+    url: mailto:【客服邮箱】
+    about: 付费客户专属支持通道（订单号 + 问题描述）。
