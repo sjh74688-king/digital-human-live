@@ -62,4 +62,4 @@ xattr -d com.apple.quarantine "/Applications/${APP_NAME}" 2>/dev/null || true
 
 echo ""
 echo "✔ 安装完成。请启动「泡泡直播」并输入 License Key 激活。"
-echo "  购买/补发 Key：https://【购买链接】"
+echo "  购买/补发 Key：https://pan.baidu.com/s/5HWb97t2iI5p8TDAGuo0N9A#list/path=%2F"
