@@ -4,7 +4,7 @@
 > - 本软件为 **收费商业软件**：**不开源、无免费版、无试用版**。
 > - 本公开 GitHub 仓库仅用于：产品介绍、演示截图、版本下载（Releases）、Issue 反馈。
 > - **核心源码永不放入本仓库**。源码、构建脚本、授权服务器均存放于私有仓库。
-> - 文中「泡泡直播 / Paopao Live」及所有价格、链接均为 **示例占位**，上架前请全局替换为你的真实信息（替换清单见本文件末尾）。
+> - 运营主体：**泡泡文化**。文中价格、购买链接、联系方式均为真实信息，如有变动以最新版本为准。
 
 ---
 
@@ -30,20 +30,26 @@
 | 断流保护 | 网络异常自动重连，直播不中断 |
 | 内容合规 | 内置 AI 生成内容显式+隐式标识（符合《人工智能生成合成内容标识办法》要求） |
 
-> 📸 产品截图与演示视频见 [`assets/`](./assets/) 目录（上架前替换为真实截图）。
+## 🖼 产品截图
 
-## 💰 价格（仅收费，无免费版）
+| 主界面 | 形象编辑 | 语音克隆 |
+|---|---|---|
+| ![主界面](./assets/screenshots/01-main-window.png) | ![形象编辑](./assets/screenshots/02-avatar-editor.png) | ![语音克隆](./assets/screenshots/03-voice-clone.png) |
 
-| 版本 | 价格（示例占位） | 有效期 | 包含内容 |
+| 脚本引擎 | 评论互动 | 许可证激活 |
+|---|---|---|
+| ![脚本引擎](./assets/screenshots/04-script-engine.png) | ![评论互动](./assets/screenshots/05-comment-reply.png) | ![许可证](./assets/screenshots/06-license.png) |
+
+## 💰 价格（仅收费）
+
+| 版本 | 价格 | 有效期 | 包含内容 |
 |---|---|---|---|
-| **标准版** | ¥2,999 / 年 | 1 年 | 1 个数字人、1 个直播账号、基础脚本引擎、1 年版本更新 |
-| **专业版** | ¥6,999 / 年 | 1 年 | 5 个数字人、5 个账号、评论自动互动、断流保护、优先支持 |
-| **企业版** | 联系销售 | 按需定制 | 不限账号、私有化部署、离线授权、专属客户成功 |
+| **试用版** | ¥50 / 天 | 1 天 | 完整功能体验，适合短期活动或临时补位 |
+| **企业版** | ¥5,000 | 永久 | 不限数字人/账号、私有化部署、离线授权、专属支持 |
 
-- **不提供免费版、不提供免费试用**。可预约 1 对 1 在线演示：【预约演示链接】
-- **国内购买**：支付宝 / 微信商户支付，支持个人与企业付款，可开具发票（电子普票 / 专票）。购买入口：【购买链接】
-- **海外购买**：Lemon Squeezy / Stripe（由收款方代扣代缴 VAT/GST）。购买入口：【海外购买链接】
-- 价格与权益以官网当期公示为准，续费享老客户价。
+- 购买入口：[https://pan.baidu.com/s/5HWb97t2iI5p8TDAGuo0N9A#list/path=%2F](https://pan.baidu.com/s/5HWb97t2iI5p8TDAGuo0N9A#list/path=%2F)
+- 付款支持支付宝 / 微信；企业客户可开具发票（电子普票 / 专票），如需专票请联系客服。
+- 价格与权益以购买页当期公示为准，企业版续期/增购权益请咨询客服。
 
 ## 🖥 系统要求
 
@@ -59,7 +65,7 @@
 
 ### 方式一：手动下载（推荐）
 
-1. 前往 [Releases](https://github.com/【你的GitHub账号】/digital-human-live/releases) 下载与你系统匹配的最新安装包；
+1. 前往 [Releases](https://github.com/sjh74688-king/digital-human-live/releases) 下载与你系统匹配的最新安装包；
 2. **Windows**：双击 `PaopaoLive-Setup-x64.exe` 按向导安装；
    **macOS**：拖入「应用程序」文件夹。若被 Gatekeeper 拦截：右键 → 打开 → 打开；
 3. 启动软件，在「许可证」页面输入 License Key 激活（见下一节）。
@@ -71,26 +77,27 @@
 **Windows**（PowerShell，以管理员身份运行）：
 
 ```powershell
-iwr -useb https://raw.githubusercontent.com/【你的GitHub账号】/digital-human-live/main/scripts/install.ps1 -OutFile $env:TEMP\xl.ps1; powershell -ExecutionPolicy Bypass -File $env:TEMP\xl.ps1
+iwr -useb https://raw.githubusercontent.com/sjh74688-king/digital-human-live/main/scripts/install.ps1 -OutFile $env:TEMP\xl.ps1; powershell -ExecutionPolicy Bypass -File $env:TEMP\xl.ps1
 ```
 
 **macOS / Linux**：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/【你的GitHub账号】/digital-human-live/main/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/sjh74688-king/digital-human-live/main/scripts/install.sh | bash
 ```
 
 ## 🔑 购买与激活
 
-1. 选择版本并付款：【购买链接】（国内） / 【海外购买链接】（海外）；
-2. 付款成功后 License Key 发送至订单邮箱（国内支付通常 5 分钟内，海外支付 1 小时内）；
+1. 选择版本并付款：[https://pan.baidu.com/s/5HWb97t2iI5p8TDAGuo0N9A#list/path=%2F](https://pan.baidu.com/s/5HWb97t2iI5p8TDAGuo0N9A#list/path=%2F)；
+2. 付款成功后 License Key 发送至订单邮箱（通常 5 分钟内），同时客服会通过微信确认；
 3. 打开软件 →「许可证」→ 输入 Key + 订单邮箱完成激活（在线验证，断网可续期 7 天内补激活）；
-4. 企业版支持**离线激活**与**私有化部署**，联系销售；
-5. 发票：将订单号发送至【发票邮箱】，3 个工作日内开出。
+4. 企业版支持**离线激活**与**私有化部署**，联系客服；
+5. 发票：将订单号发送至客服邮箱 <1169202852@qq.com>，3 个工作日内开出。
 
 ## ❓ 常见问题
 
-- **Q：有免费版吗？** A：没有。本产品为纯商业付费产品；可以先预约演示再决定购买。
+- **Q：有免费版吗？** A：没有免费版。有 **¥50/天** 的试用版可完整体验全部功能，按天计费、随用随买。
+- **Q：企业版是永久买断吗？** A：是。**¥5,000 永久使用**，含不限数字人/账号、私有化部署与离线授权；后续大版本升级权益请咨询客服。
 - **Q：一台电脑 / 一个 Key 能装几台？** A：以所购版本的并发激活数为准，超额激活会被吊销，续费可恢复。
 - **Q：可以退款吗？** A：自付款之日起 7 天内且未激活使用的订单可全额退款，已激活的按《服务条款》执行。
 - **Q：能上抖音 / 快手吗？** A：软件提供推流能力；你的类目是否允许数字人直播、需要哪些报备，以平台最新规则为准，使用前请自行确认。
@@ -119,21 +126,26 @@ curl -fsSL https://raw.githubusercontent.com/【你的GitHub账号】/digital-hu
 
 ## 📮 支持
 
-- 🐛 Bug 报告 / 建议：[GitHub Issues](https://github.com/【你的GitHub账号】/digital-human-live/issues)（请勿在 Issue 中贴 License Key、支付信息）
-- ✉️ 客服邮箱：【客服邮箱】
-- 💬 企业微信 / 公众号：【占位】
-- 付费客户享受工单优先响应（专业版 4h，企业版 1h，工作时间）。
+- 🐛 Bug 报告 / 建议：[GitHub Issues](https://github.com/sjh74688-king/digital-human-live/issues)（请勿在 Issue 中贴 License Key、支付信息）
+- ✉️ 客服邮箱：<1169202852@qq.com>
+- 💬 客服微信（购买/售后/发票，扫码添加）：
+
+  <img src="./assets/wechat-qr.png" alt="客服微信" width="200">
+
+- 付费客户享受优先响应（试用版 24h 内，企业版 2h 内，工作时间）。
 
 ---
 
-## 📋 上架前替换清单（逐项检查）
+## 关于泡泡文化
 
-| 占位符 | 替换为 |
+泡泡文化（Bubble Culture）专注数字人直播技术研发，提供从数字人形象生成、语音克隆到无人直播的完整工具链。
+
+---
+
+## 📋 上架前仍需补全（可选）
+
+| 占位符 | 说明 |
 |---|---|
-| 【你的GitHub账号】 | 你的 GitHub 账号 / 组织名（含 Releases 链接、raw.githubusercontent 链接） |
-| 泡泡直播 / Paopao Live | 你的真实产品名（全仓库搜索替换，含文件名 `PaopaoLive-Setup-*`） |
-| 【公司全称】 | 营业执照上的公司全称 |
-| 价格 ¥2,999 / ¥6,999 | 你的真实定价 |
-| 【购买链接】【海外购买链接】【预约演示链接】 | 支付收银台 / 演示预约页 URL |
-| 【发票邮箱】【客服邮箱】【占位】 | 真实联系方式 |
-| `assets/` 截图 | 真实产品截图与演示视频 |
+| 【公司全称】 | 如「营业执照上的公司全称」非「泡泡文化」，请替换 LEGAL 三个文件中的该占位 |
+| 价格 / 链接 | 已在正文更新，若后续变动同步此处即可 |
+| 截图 | 已放 `assets/screenshots/` 6 张 + 微信二维码 `assets/wechat-qr.png` |
