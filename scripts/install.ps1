@@ -16,12 +16,12 @@
 $ErrorActionPreference = "Stop"
 
 # ---------- 配置区（上架前替换） ----------
-$RepoOwner   = "<你的GitHub账号>"
+$RepoOwner   = "sjh74688-king"
 $RepoName    = "digital-human-live"
 $ProductName = "PaopaoLive"            # 安装包文件名前缀
 $InstallDir  = "C:\Program Files\PaopaoLive"
 # 期望的 SHA-256（每次发版后由发布流程更新到这里；也可改为从 Releases 的 sha256.txt 读取）
-$ExpectedSha256 = "替换为最新版本的SHA256小写"
+$ExpectedSha256 = "402cf49c90f4887b0ace4cf1faae28779469b30e46c3c50e806f0b079fffffb7"
 # ------------------------------------------
 
 # 1. 获取最新版本 tag（调用 GitHub API，无需 token 有速率限制但个人足够）
