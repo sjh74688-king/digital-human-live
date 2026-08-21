@@ -57,4 +57,4 @@ if ($LASTEXITCODE -ne 0) { throw "安装失败，退出码 $LASTEXITCODE" }
 Remove-Item $exePath -Force -ErrorAction SilentlyContinue
 Write-Host ""
 Write-Host "✔ 安装完成。请启动「泡泡直播」并输入 License Key 激活。" -ForegroundColor Green
-Write-Host "  购买/补发 Key：https://【购买链接】" -ForegroundColor Yellow
+Write-Host "  购买/补发 Key：https://pan.baidu.com/s/5HWb97t2iI5p8TDAGuo0N9A#list/path=%2F" -ForegroundColor Yellow
