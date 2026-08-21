@@ -32,13 +32,13 @@
 
 ## 🖼 产品截图
 
-| 主界面 | 形象编辑 | 语音克隆 |
+| 总控中心 | AI 直播 | 机位控制 |
 |---|---|---|
-| ![主界面](./assets/screenshots/01-main-window.png) | ![形象编辑](./assets/screenshots/02-avatar-editor.png) | ![语音克隆](./assets/screenshots/03-voice-clone.png) |
+| ![总控中心](./assets/screenshots/01-总控中心.png) | ![AI 直播](./assets/screenshots/02-AI直播.png) | ![机位控制](./assets/screenshots/03-机位控制.png) |
 
-| 脚本引擎 | 评论互动 | 许可证激活 |
+| 音色克隆 | 数字人 | 实时转播 |
 |---|---|---|
-| ![脚本引擎](./assets/screenshots/04-script-engine.png) | ![评论互动](./assets/screenshots/05-comment-reply.png) | ![许可证](./assets/screenshots/06-license.png) |
+| ![音色克隆](./assets/screenshots/04-音色克隆.png) | ![数字人](./assets/screenshots/05-数字人.png) | ![实时转播](./assets/screenshots/06-实时转播.png) |
 
 ## 💰 价格（仅收费）
 
