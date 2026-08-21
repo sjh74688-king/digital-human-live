@@ -12,11 +12,11 @@
 set -euo pipefail
 
 # ---------- 配置区（上架前替换） ----------
-REPO_OWNER="<你的GitHub账号>"
+REPO_OWNER="sjh74688-king"
 REPO_NAME="digital-human-live"
 PRODUCT_PREFIX="PaopaoLive"
 APP_NAME="泡泡直播.app"          # dmg 内的应用名，按你打包时的实际名称替换
-EXPECTED_SHA256="替换为最新版本的SHA256小写"
+EXPECTED_SHA256="402cf49c90f4887b0ace4cf1faae28779469b30e46c3c50e806f0b079fffffb7"
 # ------------------------------------------
 
 echo "[1/4] 查询最新版本..."
@@ -37,7 +37,7 @@ dmg_path="$(mktemp -d)/xl.dmg"
 curl -fSL --progress-bar -o "$dmg_path" "$dl_url"
 
 echo "[3/4] 校验 SHA-256..."
-if [[ -n "$EXPECTED_SHA256" && "$EXPECTED_SHA256" != "替换为最新版本的SHA256小写" ]]; then
+if [[ -n "$EXPECTED_SHA256" ]]; then
   actual=$(shasum -a 256 "$dmg_path" | awk '{print $1}')
   if [[ "$actual" != "$EXPECTED_SHA256" ]]; then
     rm -f "$dmg_path"
